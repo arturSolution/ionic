@@ -1,19 +1,26 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, ActionSheet } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ActionSheetPage } from '../pages/action-sheet/action-sheet';
+import { AlertPage } from '../pages/alert/alert';
+import { BadgesPage } from './../pages/badges/badges';
+import { BotoesPage } from '../pages/botoes/botoes';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
+    HomePage,    
+    ActionSheetPage,
+    AlertPage,
+    BadgesPage,
+    BotoesPage
   ],
   imports: [
     BrowserModule,
@@ -22,8 +29,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
+    HomePage,    
+    ActionSheetPage,
+    AlertPage,
+    BadgesPage,
+    BotoesPage
   ],
   providers: [
     StatusBar,

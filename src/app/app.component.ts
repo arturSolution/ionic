@@ -1,10 +1,15 @@
+
+import { ActionSheetPage } from './../pages/action-sheet/action-sheet';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
+import { AlertPage } from '../pages/alert/alert';
+import { BadgesPage } from './../pages/badges/badges';
+import { BotoesPage } from '../pages/botoes/botoes';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +17,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = BotoesPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +26,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Home', component: HomePage },      
+      { title: 'ActionSheet', component: ActionSheetPage },
+      { title: 'AlertPage', component: AlertPage },
+      { title: 'BadgesPage', component: BadgesPage },
+      { title: 'BotõesPage', component: BotoesPage }
+
     ];
 
   }
